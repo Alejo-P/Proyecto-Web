@@ -102,14 +102,8 @@ export const updateVehicleController = async (req, res) => {
             Id_Cliente
         } = req.body;
 
-        const [updated] =  await Vehicles.update(updateVehicle, {where: { Placa: placa } });
-        if (updated) {
-            res.status(200).send(updateVehicle);
-        } else {
-            res.status(404).send({
-                message: '¡No se pudo actualizar el registro!'
-            });
-        }
+        await Vehicles.update(updateVehicle, {where: { Placa: placa } });
+        res.status(200).send(updateVehicle);
     } catch (error) {
         res.status(500).send({
             message: error.message || '¡Ocurrió un error al actualizar el Vehículo!'

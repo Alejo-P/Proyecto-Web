@@ -115,14 +115,8 @@ export const updateClientController = async (req, res) => {
             Tipo_Usuario
         };
 
-        const [updated] = await Clients.update(updateUser, { where: { Id_Cliente: id } });
-        if (updated) {
-            res.status(200).json(updateUser);
-        } else {
-            res.status(404).send({
-                message: `¡No se pudo actualizar el Cliente con el Id=${id}!`
-            });
-        }
+        await Clients.update(updateUser, { where: { Id_Cliente: id } });
+        res.status(200).json(updateUser);
     } catch (error) {
         res.status(500).send({
             message: error.message || '¡Ocurrió un error al actualizar el Cliente!'

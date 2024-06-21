@@ -101,14 +101,8 @@ export const updateMaintenanceController = async (req, res) => {
             Fecha_Siguiente_Mantenimiento
         };
 
-        const [updated] = Maintenance.update(updateMaintenance, {where: { Id_Mantenimiento: id }});
-        if (updated) {
-            res.status(200).send(updateMaintenance);
-        } else {
-            res.status(404).send({
-                message: '¡No se pudo actualizar el Mantenimiento con el Id especificado!'
-            });
-        }
+        await Maintenance.update(updateMaintenance, {where: { Id_Mantenimiento: id }});
+        res.status(200).json(updateMaintenance);
     } catch (error) {
         res.status(500).send({
             message: error.message || '¡Ocurrió un error al actualizar el Mantenimiento!'
