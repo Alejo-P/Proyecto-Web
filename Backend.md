@@ -9,9 +9,10 @@
 <p>
     La estructura de la base de datos esta conformada por las siguientes teblas:
 </p>
+
 <div align="center">
     <img 
-    src="image.png" 
+    src="https://github.com/Alejo-P/Proyecto-Web/assets/150528715/0a2e135e-6a2d-40fc-902f-acff7c1ccfff" 
     alt="Estructura de la base de datos"
     style="width: 80%; height: auto; margin: 0 auto; display: block;"
     >
