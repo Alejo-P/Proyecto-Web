@@ -3,7 +3,7 @@ const { DataTypes } = pkg;
 import sequelize from '../database.js';
 
 // Definir el modelo para la tabla 'Mantenimientos'
-const Maintenance = sequelize.define('Mantenimientos', {
+const Maintenance = sequelize.define('mantenimiento', {
     Id_Mantenimiento: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -40,7 +40,7 @@ const Maintenance = sequelize.define('Mantenimientos', {
     }
 }, {
     sequelize,
-    tableName: 'Mantenimientos',
+    tableName: 'mantenimiento',
     timestamps: false
 });
 

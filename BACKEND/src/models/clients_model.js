@@ -37,7 +37,7 @@ const Clients = sequelize.define('clientes', {
         allowNull: false
     },
     Contraseña: {
-        type: DataTypes.STRING(50),
+        type: DataTypes.STRING(255),
         allowNull: false
     },
     Dirección: {

@@ -2,6 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import bodyParser from 'body-parser';
 import clientRoutes from './routers/clients_routes.js';
 import vehicleRoutes from './routers/vehicles_routes.js';
 import maintenanceRoutes from './routers/maintenance_routes.js';
@@ -13,6 +14,7 @@ const app = express();
 dotenv.config();
 app.use(morgan('dev'));
 app.use(cors());
+app.use(bodyParser.json())
 app.use(express.json());
 
 // Rutas predefinidas

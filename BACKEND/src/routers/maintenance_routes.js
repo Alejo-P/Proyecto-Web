@@ -1,23 +1,29 @@
 import { Router } from 'express';
-import { create, findAll, findOne, update, remove } from '../controllers/maintenance_controller.js';
+import {
+    createMaintenanceController,
+    getAllMaintenancesController,
+    getOneMaintenanceController,
+    updateMaintenanceController,
+    deleteMaintenanceController
+} from '../controllers/maintenance_controller.js';
 
 // Crear una instancia de Router
 const router = Router();
 
 // Crear un nuevo Mantenimiento
-router.post('/', create);
+router.post('/', createMaintenanceController);
 
 // Obtener todos los Mantenimientos
-router.get('/', findAll);
+router.get('/', getAllMaintenancesController);
 
 // Obtener un Mantenimiento por su Id
-router.get('/:id', findOne);
+router.get('/:id', getOneMaintenanceController);
 
 // Actualizar un Mantenimiento por su Id
-router.put('/:id', update);
+router.put('/:id', updateMaintenanceController);
 
 // Eliminar un Mantenimiento por su Id
-router.delete('/:id', remove);
+router.delete('/:id', deleteMaintenanceController);
 
 // Exportar el Router
 export default router;

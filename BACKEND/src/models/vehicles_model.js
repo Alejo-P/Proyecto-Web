@@ -3,7 +3,7 @@ const { DataTypes } = pkg;
 import sequelize from '../database.js';
 
 // Definir el modelo para la tabla 'Vehiculos'
-const Vehicles = sequelize.define('Vehiculos', {
+const Vehicles = sequelize.define('vehiculos', {
     Placa: {
         type: DataTypes.STRING(10),
         primaryKey: true,
@@ -31,7 +31,7 @@ const Vehicles = sequelize.define('Vehiculos', {
     }
 }, {
     sequelize,
-    tableName: 'Vehiculos',
+    tableName: 'vehiculos',
     timestamps: false
 });
 
