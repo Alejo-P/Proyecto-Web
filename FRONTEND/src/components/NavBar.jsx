@@ -21,8 +21,8 @@ const NavBar = () => {
                 <i className="fa-solid fa-bars"></i>
             </div> 
             <div className="Botones">
-                <Link to="/IniciarSesion" target="_blank" ><span>Iniciar Sesión</span> </Link>
-                <Link to="/Registros" target="_blank" ><span>Registrarse</span> </Link>
+                <Link to="/login" ><span>Iniciar Sesión</span> </Link>
+                <Link to="/Registros" ><span>Registrarse</span> </Link>
             </div>
         </header>
     </div>
