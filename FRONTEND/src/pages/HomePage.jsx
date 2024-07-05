@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Video from '../assets/VideoOficial.mp4'
+import Info from '../assets/images'
 
 const HomePage = () => {
   return (
@@ -31,8 +32,8 @@ const HomePage = () => {
             </div>
         </section>
 
-        <section id="acerca" class="acerca">
-            <div class="contenido-seccion">
+        <section id="acerca" className="acerca">
+            <div className="contenido-seccion">
                 <h2>NOSOTROS</h2>
             
                 <p>Full Prestige es una empresa consolidada desde....., contamos con una amplia trayectoria y conformado por un excelente equipo de trabajo (EX TECNICOS DE TOYPTA) Nuestra mision, complacer y hacer realidad las espectativas de cada uno de nuetsros clientes. 
@@ -42,64 +43,123 @@ const HomePage = () => {
                     imilique consequuntur quo consequatur repudiandae perspiciatis!
                 </p>
                 <h3>Somos Multimarca</h3>
-                <div class="multimarca">
-                    <div class="marcas">
-                        <img src="Imagenes/ImgAcerca/icon1.jpg" alt="">
-                    </div>
-                    <div class="marcas">
-                        <img src="Imagenes/ImgAcerca/icon2.jpg" alt="">
-                    </div>
-                    <div class="marcas">
-                        <img src="Imagenes/ImgAcerca/icon3.jpg" alt="">
-                    </div>
-                    <div class="marcas">
-                        <img src="Imagenes/ImgAcerca/icon4.jpg" alt="">
-                    </div>
-                    <div class="marcas">
-                        <img src="Imagenes/ImgAcerca/icon5.jpg" alt="">
-                    </div>
-                    <div class="marcas">
-                        <img src="Imagenes/ImgAcerca/icon6.jpeg" alt="">
-                    </div>
-                    <div class="marcas">
-                        <img src="Imagenes/ImgAcerca/icon7.jpg" alt="">
-                    </div>
-                    <div class="marcas">
-                        <img src="Imagenes/ImgAcerca/icon8.jpg" alt="">
-                    </div>
-                    <div class="marcas">
-                        <img src="Imagenes/ImgAcerca/icon9.jpg" alt="">
-                    </div>
-                    <div class="marcas">
-                        <img src="Imagenes/ImgAcerca/icon10.jpg" alt="">
-                    </div>
-                    <div class="marcas">
-                        <img src="Imagenes/ImgAcerca/icon11.jpg" alt="">
-                    </div>
-                    <div class="marcas">
-                        <img src="Imagenes/ImgAcerca/icon12.jpg" alt="">
-                    </div> 
-                
+                <div className="multimarca">
+                    {Info.vehiclesBrands.map((image) => {
+                        return (
+                            <div key={image.name} className="marcas">
+                                <img src={image.value} alt=""/>
+                                <p>{image.name}</p>
+                            </div>
+                        )
+                    })}
                 </div>
-                <h3>Trabajamos con los mejores productos</h3> <br>
-                <div class="Productos"> <br>
-
-
-                    <div class="producto">
-                        <img src="Imagenes/ImgAcerca/pro1.jpg" alt="">
-                    </div>
-                    <div class="producto">
-                        <img src="Imagenes/ImgAcerca/pro2.jpg" alt="">
-                    </div>
-                    <div class="producto">
-                        <img src="Imagenes/ImgAcerca/pro3.jpg" alt="">
-                    </div>
-                    <div class="producto">
-                        <img src="Imagenes/ImgAcerca/pro4.jpg" alt="">
-                    </div>
-                
+                <h3>Trabajamos con los mejores productos</h3> <br/>
+                <div className="Productos"> <br/>
+                    {
+                        Info.productUse.map((image) => {
+                            return (
+                                <div key={image.name} className="producto">
+                                    <img src={image.value} alt=""/>
+                                    <p>{image.name}</p>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
             </div>
         </section>
+
+        <section id="servicios" className="servicios">
+            <div className="contenido-seccion">
+                <h2>SERVICIOS</h2>
+                <div className="galeria">
+                    {
+                        Info.Services.map((service) => {
+                            return (
+                                <div key={service.name} className="proyecto">
+                                    <img src={service.value} alt=""/>
+                                    <h3>{service.name}</h3>
+                                    <h4>{service.price}</h4>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" className="contacto">
+            <div className="contenido-seccion">
+                <h2>CONTACTANOS</h2>
+                <div className="fila">
+                    
+                    <div className="col">
+                        <input type="text" placeholder="Tu nombre"/>
+                        <input type="text" placeholder="Numero Teléfono"/>
+                        <input type="text" placeholder="Dirección de correo"/>
+                        <input type="text" placeholder="Tema"/>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                        <button>
+                            Enviar Mensaje <i className="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+
+                    <div className="col">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7574.439967442809!2d-78.45197548798788!3d-0.33444451232886957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d5bd62fd7cd6c3%3A0xdfe040bb17af6d28!2sFull%20Prestige!5e0!3m2!1ses!2sec!4v1707584098101!5m2!1ses!2sec" width="600" height="450" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <div className="info">
+                            <ul>
+                                <li>
+                                    <i className="fa-solid fa-location-dot"></i>
+                                    Sangolqui-España 686 (Detrás de la Nova Clinica del Valle)
+                                </li>
+                                <li>
+                                    <i className="fa-brands fa-whatsapp"></i>
+                                    Contactame: 0980688763
+                                </li>
+                                <li>
+                                    <i className="fa-solid fa-envelope"></i>
+                                    Email: miguel_sdq@hotmail.es
+                                </li>
+                                <li>
+                                    <i className="fa-solid fa-calendar-days"></i>
+                                    Horario de atención: <br/>
+                                    Lunes-Viernes (8:00 am - 5:00 pm) <br/>
+                                    Sabado (8:00 am - 1:00 pm) <br/>
+                                    Domingo (No hay atención)
+                                </li>   
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="metodos" className="metodos">
+            <div className="contenido-seccion">
+                <h2>MÉTODOS DE  PAGO</h2>
+                <h4>Tarjetas de crédito y débito</h4>
+                <div className="galeria">
+                    {
+                        Info.paymentMethods.map((image) => {
+                            return (
+                                <div key={image.name} className="proyecto">
+                                    <img src={image.value} alt=""/>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2024 Full Prestige</p>
+            <h2>FRONTED: Silvia Chaluisa </h2>
+            <h2>BACKEND: Marcelo Pinzón</h2>
+            <a href="#inicio" className="arriba">
+                <i className="fa-solid fa-angles-up"></i>
+            </a>
+        </footer>
     </div>
   )
 }

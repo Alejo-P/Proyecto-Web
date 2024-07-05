@@ -14,7 +14,6 @@ function App() {
         <Route path="/login" element={<HomePage/>}/>
         <Route path="/register" element={<HomePage/>}/>
       </Routes>
-      <h1>Hola a todos</h1>
     </Router>
   )
 }

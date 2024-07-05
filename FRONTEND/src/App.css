@@ -102,7 +102,7 @@ html{
 /* SECCION INICIO---------------------------------------------------------------------------------------*/
 /*video*/
 .inicio{
-  background-image: url(../Imagenes/Fondo.jpg);
+  background-image: url(assets/Fondo.jpg);
   background-size: cover;
   height: 100vh;
   color: #fff;
@@ -286,7 +286,7 @@ html{
 .bienvenido,
 .acerca{
   background: linear-gradient(to top, rgba(7, 7, 7, 0.8),rgba(0, 0, 0, 0.8)),
-  url(../Imagenes/ImgAcerca/Fondo1.jpeg);
+  url(assets/ImgAcerca/Fondo1.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 110vh;
@@ -360,7 +360,7 @@ html{
 /* SECCION SERVICIO ----------------------------------------------------------------------------------------------------------------*/
 .servicios{
   background: linear-gradient(to top, rgba(59, 61, 62, 0.8),rgb(41, 51, 56, 0.8)),
-  url(../Imagenes/ImgServ/Fondo.jpg);
+  url(assets/ImgServ/Fondo.jpg);
   padding: 50px 20px;
   height: 110vh;
 }
@@ -397,7 +397,7 @@ html{
 /* SECCION CONTACTOS -------------------------------------------------------------------------------------------*/
 .contacto{
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),
-  url(../Imagenes/FondoContacto.jpg);
+  url(assets/FondoContacto.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 140vh; /*tamaño de la seccion*/
@@ -476,7 +476,7 @@ html{
 
 .Inicio{
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),
-  url(../Imagenes/FondoInicio/Imagen1.jpg);
+  url(assets/FondoInicio/Imagen1.jpg);
   background-attachment: fixed;
   height: 100vh;
   display: flex;
@@ -579,7 +579,7 @@ html{
 
 .Registro{
   background: linear-gradient(to top, rgba(12, 9, 9, 0.8),rgba(1, 1, 1, 0.8)),
-  url(../Imagenes/FondoInicio/Imagen1.jpg);
+  url(assets/FondoInicio/Imagen1.jpg);
  
   background-attachment: fixed;
   height: 100vh;
@@ -598,7 +598,7 @@ html{
 /* SECCION METODOS DE PAGO ---------------------------------------------------------------------------------------------------------*/
 .metodos{
   background: linear-gradient(to top, rgba(15, 14, 14, 0.5),rgba(34, 32, 32, 0.6)),
-  url(../Imagenes/ImgMetodos/Fondo.jpg);
+  url(assets/ImgMetodos/Fondo.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   /* width: 100%; */

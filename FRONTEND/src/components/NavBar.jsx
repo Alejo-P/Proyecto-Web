@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom"
+import Images from "../assets/images"
 
 const NavBar = () => {
   return (
     <div className="contenedor-header">
         <header>
             <div className="logo">
-                <img src="Imagenes/Logo.jpg" alt=""/>   
+                <img src={Images.logo} alt=""/>   
             </div>
         
             <nav id="nav">
