@@ -22,7 +22,7 @@ const NavBar = () => {
             </div> 
             <div className="Botones">
                 <Link to="/login" ><span>Iniciar Sesión</span> </Link>
-                <Link to="/Registros" ><span>Registrarse</span> </Link>
+                <Link to="/register" ><span>Registrarse</span> </Link>
             </div>
         </header>
     </div>

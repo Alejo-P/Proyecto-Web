@@ -6,6 +6,7 @@ import bodyParser from 'body-parser';
 import clientRoutes from './routers/clients_routes.js';
 import vehicleRoutes from './routers/vehicles_routes.js';
 import maintenanceRoutes from './routers/maintenance_routes.js';
+import asUsersRoutes from './routers/asUsers_routes.js';
 
 // INstanciacion de express
 const app = express();
@@ -31,6 +32,7 @@ app.set('port', process.env.PORT || 4000);
 app.use('/api/clients', clientRoutes);
 app.use('/api/vehicles', vehicleRoutes);
 app.use('/api/maintenance', maintenanceRoutes);
+app.use('/api/getAsUsers', asUsersRoutes);
 
 // Ruta para el error 404
 app.use((req, res, next) => {

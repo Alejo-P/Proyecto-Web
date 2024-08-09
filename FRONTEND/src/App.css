@@ -473,18 +473,19 @@ html{
 
 /*----------------------------------------------------------------------------------------------------------------------------------------*/
 /* INICIAR SESION------------------------------------------------------------------------------------------------------------------------- */
-
-.Inicio{
+.ventanaLogin{
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),
   url(assets/FondoInicio/Imagen1.jpg);
   background-attachment: fixed;
-  height: 100vh;
   display: flex;
-  align-items: center;
   color: white;
-  
+  width: 100%;
   /* padding: 50px 20px; Separa los texto de los margenes de las pantallas */
 }
+.divLogo{
+  display: flex;
+}
+
 .logo-forms{
  margin-left: 20px;
  margin: 20px;
@@ -492,18 +493,25 @@ html{
   overflow: hidden; /* Oculta cualquier parte de la imagen que se extienda más allá del borde redondeado */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9); /* Ajusta el valor de acuerdo a la intensidad deseada */ 
 }
-.col h2{
-  color: #ffffff;
-  font-size: 3em;
+.formLogin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px; /* Ajusta el valor según la cantidad de redondeo deseada */
+  padding: 20px; /* Ajusta el valor según la cantidad de relleno deseada */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9); /* Ajusta el valor de acuerdo a la intensidad deseada */
 }
 .formulario-ingreso{
   background-color: rgb(0, 0, 0);
   border-radius: 15px;
-  color: #ffffff;
   box-shadow: 0 4px 8px 0 rgba(238, 5, 5, 0.9), 0 6px 20px 0 rgba(189, 44, 44, 0.9);
   padding: 60px;
   width: max-content;/*Ajusta el ancho del contenedor al contenido*/
   text-align: center;
+  h2{
+    color: #ffffff;
+  }
 }
 .formulario-ingreso label{
   font-family:Arial, Helvetica, sans-serif;
@@ -524,6 +532,23 @@ html{
   color: #d1c9c9;
 }
 .formulario-ingreso input:hover{
+  box-shadow: 0 0 9px rgba(208, 207, 207, 0.9), inset 0 0 10px rgba(255, 255, 255, .4);
+}
+.formulario-ingreso #miMenuDesplegable{
+  width: 100%;
+  border: 1px solid #ccc;
+  background-color: #585757;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease; /* Añade una transición suave al cambio de color del borde */
+}
+.formulario-ingreso #miMenuDesplegable::placeholder{
+  color: #d1c9c9;
+}
+.formulario-ingreso #miMenuDesplegable:hover{
   box-shadow: 0 0 9px rgba(208, 207, 207, 0.9), inset 0 0 10px rgba(255, 255, 255, .4);
 }
 .formulario-ingreso #caja1{
@@ -582,7 +607,6 @@ html{
   url(assets/FondoInicio/Imagen1.jpg);
  
   background-attachment: fixed;
-  height: 100vh;
   display: flex;
   align-items: center;
   color: white;

@@ -3,7 +3,6 @@ import bcrypt from 'bcrypt';
 
 // Crear y guardar un nuevo Cliente
 export const createClientController = async (req, res) => {
-    console.log("Entro a la ruta para crear un nuevo cliente");
     if (!req.body.Nombres || !req.body.Apellidos || !req.body.Cédula || !req.body.Contacto || !req.body.Correo || !req.body.Fecha_Nacimiento || !req.body.Contraseña || !req.body.Dirección || !req.body.Tipo_Usuario) {
         res.status(400).send({
             message: '¡Faltan datos en la solicitud!'

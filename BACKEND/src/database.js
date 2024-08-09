@@ -10,14 +10,18 @@ const sequelize = new Sequelize(
     process.env.MySQL_USER,
     process.env.MySQL_PASSWORD,
     {
-    host: 'localhost',
+    host: process.env.MySQL_HOST || 'localhost',
     dialect: 'mysql'
 });
 
 // Probar la conexión a la base de datos
 sequelize.authenticate()
-.then(console.log("Conexion establecida a la base de datos!!!"))
-.catch(err => console.log("Error de conexion a la base de datos: ", err));
+  .then(() => {
+    console.log("Conexión establecida a la base de datos!!!");
+  })
+  .catch(err => {
+    console.error("Error de conexión a la base de datos: ", err);
+  });
 
 // Exportar sequelize
 export default sequelize;
